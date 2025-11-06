@@ -22,3 +22,9 @@ function add(a,b,...c){
 }
 let nums = [ 1, 3,4 ,5,7];
 console.log(add(nums[3],...nums));
+
+//pack multiple values into an array 
+function numbers(...args){
+    console.log(args);
+}
+numbers(1,3,5,6,8);
