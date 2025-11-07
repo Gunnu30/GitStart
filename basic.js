@@ -1,3 +1,7 @@
+console.log(a)
+var a = 10; // hoisting
+
+
 //spread operator with arrays
 let a1 = [2,1]
 let a2 = [1,...a1,5]
@@ -28,3 +32,5 @@ function numbers(...args){
     console.log(args);
 }
 numbers(1,3,5,6,8);
+
+//
