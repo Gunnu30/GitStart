@@ -1,6 +1,9 @@
 console.log(a)
 var a = 10; // hoisting
 
+const b = "hii"
+console.log(b)
+b = "Hello" // not bossible cause const type is immutable
 
 //spread operator with arrays
 let a1 = [2,1]
@@ -33,4 +36,29 @@ function numbers(...args){
 }
 numbers(1,3,5,6,8);
 
-//
+//types of defining functions 
+
+// 1 -> arrow function
+
+let sum = (a,b) =>{
+    return a+b;
+}
+console.log(sum(4,5));
+// or 
+
+let sum1 = (a,b) => a+b;
+console.log(sum1(4,5));
+
+// 2 function Declaration
+
+function greet(){
+    console.log("Hi , This is Functions Declaration");
+}
+greet();
+
+// 3 function Expression
+
+const expressionFun = function(){
+    console.log("Function Expression");
+}
+expressionFun();
