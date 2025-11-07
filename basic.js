@@ -62,3 +62,52 @@ const expressionFun = function(){
     console.log("Function Expression");
 }
 expressionFun();
+
+// Factory Function ->   It is also a type of function, but I wanted to write it separately.
+
+function createCar(color , brand){
+    return {
+        color:color,
+        brand : brand,
+        start : function(){ // start is a function -> start()
+            console.log("Started");
+        }
+    };
+}
+let car1 = createCar("blue" , "BMW"); // it is not an instance but give obj as return
+console.log(car1);
+car1.start();  // calling the start function
+
+// in short cut -> is a camelCase decleration "createCar"
+function createCar1(color,brand){
+    return {
+        color,
+        brand , 
+        start(){
+            console.log("Started");
+        }
+    }
+}
+// it gives an obj explicitly.
+let car2 = createCar1("Red" , "Audi");
+console.log(car2);
+car2.start();
+
+// constructor function
+// it is different from factor function 
+// PascalCase representation -> like "CreateCar"
+// "new" key-ward is imp
+
+function Car(color,brand){
+    this.color = color;
+    this.brand = brand;  // "this" key-word refers the current instance or obj.
+    this.start = function(){ 
+        console.log("Started");
+    }
+}
+
+// it gives an obj implicitly.
+let obj1 = new Car("blue" , "Audi");
+console.log(obj1);
+obj1.start();
+
